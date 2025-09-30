@@ -11,7 +11,10 @@ public class Game{
    public void AddCharacter(Character c){
       allCharacters.Add(c);
    }
-
+   // A game has a turncount so we can determine how many turns have been played.
+   // Probably used to generate a score later, but also helps to keep track of 
+   // which turn the player is on so that things take time (monsters will get turns too)
+   private int TurnCount;
    public void AddRoom(Room r){
       allRooms.Add(r);
    }
