@@ -3,10 +3,10 @@
 Console.WriteLine("Hello, World!");
 
 Character c = new(Character.GameRole.pc);
-Inventory i = new();
+Equipment e = new();
 Room r = new();
 
-Console.WriteLine("Successfully created character, inventory, room.");
+Console.WriteLine("Successfully created character, equipment, room.");
 
 Game g = new();
 Console.WriteLine("Created new game.");

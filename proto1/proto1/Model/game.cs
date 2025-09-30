@@ -11,4 +11,8 @@ public class Game{
    public void AddCharacter(Character c){
       allCharacters.Add(c);
    }
+
+   public void AddRoom(Room r){
+      allRooms.Add(r);
+   }
 }

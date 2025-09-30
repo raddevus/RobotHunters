@@ -6,4 +6,6 @@ public class Room{
    // description
    // possibly a location
    //
+   public string description;
+   
 }
