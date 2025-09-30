@@ -1,0 +1,14 @@
+// A Game will hold all the resources that are used in the game
+// It will have 1 or mor characters, 1 or more rooms, and a catalog of
+// items (inventory) which are available in the game.
+// Game will also be where game logic exists like rolling dice for battle results etc.
+//
+namespace rh.Model;
+
+public class Game{
+   List<Character> allCharacters = new();
+   List<Room> allRooms = new();
+   public void AddCharacter(Character c){
+      allCharacters.Add(c);
+   }
+}
