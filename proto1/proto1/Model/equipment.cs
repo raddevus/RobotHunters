@@ -6,5 +6,8 @@ public class Equipment{
    // list of items the character is carrying
    // may also be used as inventory of a room
    public string description;
-   public string name;
+   public string Name;
+   public Equipment(string name){
+      Name = name;
+   }
 }
