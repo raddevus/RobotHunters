@@ -18,4 +18,10 @@ public class Game{
    public void AddRoom(Room r){
       allRooms.Add(r);
    }
+
+   public void InitiativeCheck(){
+      // This will occur at the beginning of a turn
+      // to determine if the player or npc gets to 
+      // make a move, attack first
+   }
 }
