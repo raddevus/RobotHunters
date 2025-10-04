@@ -19,9 +19,26 @@ public class Game{
       allRooms.Add(r);
    }
 
+   public void AdvanceTurn(){
+      // adding stub for advancing the turncounter
+   }
+
    public void InitiativeCheck(){
       // This will occur at the beginning of a turn
       // to determine if the player or npc gets to 
       // make a move, attack first
+      // Will probably set the order of the List<Character> so
+      // that when the turn plays out, then each character's action
+      // will occur then the AdvanceTurn will occur after all character's 
+      // actions have played out.  This helps to insure that all characaters
+      // in the game take their turn each time.
+      //
+      // This brings up two more issues:
+      // 1. a PC will face one or more NPCs each turn - 
+      // 2. the game must keep track which NPCs are facing the PC
+      // 3. NPCs will be added to List<Character> when they are encountered
+      // 4. NPCs will be removed from List<Character> when they leave the
+      // presenence of PCs or are killed
+      //
    }
 }
