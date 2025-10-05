@@ -20,6 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\proto1\proto1.csproj" />
-  </ItemGroup>
+ </ItemGroup>
 
 </Project>
