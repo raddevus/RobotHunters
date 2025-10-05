@@ -1,3 +1,4 @@
+using System.Text.Json;
 // A Game will hold all the resources that are used in the game
 // It will have 1 or mor characters, 1 or more rooms, and a catalog of
 // items (inventory) which are available in the game.
@@ -41,4 +42,10 @@ public class Game{
       // presenence of PCs or are killed
       //
    }
+
+   public void DisplayStory(){
+      var textData = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("descriptions.json"));
+      Console.WriteLine(textData["ForestIntro"]);
+   }
+
 }
