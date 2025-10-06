@@ -9,9 +9,11 @@ namespace rh.Model;
 public class Game{
    List<Character> allCharacters = new();
    List<Room> allRooms = new();
+ 
    public void AddCharacter(Character c){
       allCharacters.Add(c);
    }
+
    // A game has a turncount so we can determine how many turns have been played.
    // Probably used to generate a score later, but also helps to keep track of 
    // which turn the player is on so that things take time (monsters will get turns too)
@@ -20,6 +22,9 @@ public class Game{
       allRooms.Add(r);
    }
 
+   public void RunTurns(){
+      InitiativeCheck();
+   }
    public void AdvanceTurn(){
       // adding stub for advancing the turncounter
    }
@@ -41,6 +46,9 @@ public class Game{
       // 4. NPCs will be removed from List<Character> when they leave the
       // presenence of PCs or are killed
       //
+      foreach (Character c in allCharacters){
+         c.CurrentTurnNumber = new Random().Next(1,allCharacters.Count());
+      }
    }
 
    public void DisplayStory(){

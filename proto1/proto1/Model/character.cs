@@ -6,6 +6,7 @@ public class Character{
    // 
    public enum GameRole { npc, pc};
    private GameRole role;
+   public int CurrentTurnNumber{get;set;} = 0;
    public Character (GameRole charType, string name){
       role = charType;
       Name = name;
