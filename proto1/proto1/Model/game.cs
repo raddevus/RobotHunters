@@ -9,7 +9,7 @@ namespace rh.Model;
 public class Game{
    List<Character> allCharacters = new();
    List<Room> allRooms = new();
- 
+   public IEnumerable<Character> turnC{get;set;} 
    public void AddCharacter(Character c){
       allCharacters.Add(c);
    }
@@ -24,6 +24,8 @@ public class Game{
 
    public void RunTurns(){
       InitiativeCheck();
+      turnC = allCharacters.OrderBy(c => c.CurrentTurnNumber);
+
    }
    public void AdvanceTurn(){
       // adding stub for advancing the turncounter

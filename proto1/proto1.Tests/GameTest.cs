@@ -9,4 +9,15 @@ public class UnitTest1
       Game g = new();
       g.DisplayStory();
     }
+
+    [Fact]
+    public void TestGameTurns(){
+       Game g = new();
+       g.AddCharacter(new Character(Character.GameRole.pc, "frank"));
+       g.AddCharacter(new Character(Character.GameRole.pc,"Bozeman"));
+       g.RunTurns();
+       foreach (Character c in g.turnC){
+          Console.WriteLine($"{c.Name} {c.CurrentTurnNumber}");
+       }
+    }
 }

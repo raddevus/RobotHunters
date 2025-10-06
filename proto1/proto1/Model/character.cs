@@ -12,7 +12,7 @@ public class Character{
       Name = name;
    }
 
-   private string Name;
+   public string Name{get;set;}
 
    private List<Equipment> inventory = new();
 
