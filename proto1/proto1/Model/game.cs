@@ -49,7 +49,7 @@ public class Game{
       // presenence of PCs or are killed
       //
       foreach (Character c in allCharacters){
-         c.CurrentTurnNumber = new Random().Next(1,allCharacters.Count());
+         c.CurrentTurnNumber = new Random().Next(1,allCharacters.Count()+1);
       }
    }
 
