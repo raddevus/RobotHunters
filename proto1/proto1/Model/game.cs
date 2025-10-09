@@ -48,14 +48,24 @@ public class Game{
       // 4. NPCs will be removed from List<Character> when they leave the
       // presenence of PCs or are killed
       //
+      int loopCount = 0;
+      var allTurns = GenRandomizedTurns(allCharacters.Count());
       foreach (Character c in allCharacters){
-         c.CurrentTurnNumber = new Random().Next(1,allCharacters.Count()+1);
+         c.CurrentTurnNumber = allTurns.ElementAt(loopCount++);
       }
    }
 
    public void DisplayStory(){
       var textData = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("Assets/StoryText.json"));
       Console.WriteLine(textData["ForestIntro"]);
+   }
+
+   private IEnumerable<int> GenRandomizedTurns(int numberOfPlayers){
+       var rand = new Random();
+        var numbers = Enumerable.Range(1, numberOfPlayers)
+                                .OrderBy(x => rand.Next())
+                                .ToList();
+        return numbers;
    }
 
 }
