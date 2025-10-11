@@ -1,4 +1,5 @@
 {
-  "ForestIntro": "You step into a dense forest...",
+   "GameStart":" You are standing at the entrance to a large shopping mall complex.\nThe building is in disrepair and crumbling in some places.\nThere are two doors to the south of where you are standing./nHowever, you know that there are security robots inside and are probably even some military robots./n But, that doesn't matter, to succeed in your mission, you have to get\n to the power room where you've been told that a large transmitter is located.", 
+   "ForestIntro": "You step into a dense forest...",
   "CaveIntro": "The cave mouth yawns before you..."
 }

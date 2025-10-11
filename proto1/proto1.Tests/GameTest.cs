@@ -8,6 +8,7 @@ public class UnitTest1
     {
       Game g = new();
       g.DisplayStory();
+      g.DisplayGameStart();
     }
 
     [Fact]

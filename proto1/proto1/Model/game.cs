@@ -55,6 +55,11 @@ public class Game{
       }
    }
 
+   public void DisplayGameStart(){
+      
+      var textData = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("Assets/StoryText.json"));
+      Console.WriteLine(textData["GameStart"]);
+   }
    public void DisplayStory(){
       var textData = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText("Assets/StoryText.json"));
       Console.WriteLine(textData["ForestIntro"]);
